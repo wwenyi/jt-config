@@ -44,6 +44,6 @@ management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
+        include: hystrix.stream,refresh
 turbine:
   instanceUrlSuffix: /hystrix.stream
