@@ -1,0 +1,52 @@
+#端口号和根路径
+server:
+  port: 8003  servlet:    context-path: /order
+#服务名
+spring:    
+#图片上传
+#启用图片上传功能
+  servlet:
+    multipart:
+      enabled: true
+      #上传路径
+      location: D://upload
+
+#指定上传文件大小
+      max-file-size: 1Mb
+      #指定最大允许请求的大小
+      max-request-size: 10Mb  application:    name: jt-order
+
+
+#数据源
+  datasource:
+   # type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///market?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root
+#rabbitMq相关配置  rabbitmq:    host: 192.168.40.152
+    username: admin
+    password: admin
+    port: 5672
+  redis:
+    host: 192.168.40.152
+    port: 6379
+
+
+#eureka相关配置
+eureka:
+  instance:
+    prefer-ip-address: true #以IP地址注册到服务中心，相互注册使用IP地址
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+
+mybatis:
+  type-aliases-package: com.wwy.entry  configuration:    map-underscore-to-camel-case: true  mapper-locations: classpath:mapper/*.xmlfile:
+  path: D://down
+#暴露监控断点，供hystrix仪表盘监控健康状态  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
