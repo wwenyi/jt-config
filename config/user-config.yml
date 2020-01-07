@@ -40,6 +40,7 @@ ribbon:
   
   
 #暴露监控断点，供hystrix仪表盘监控健康状态  
+#暴露刷新端点，用于刷新配置，两个端点之间用，隔开
 management:
   endpoints:
     web:
