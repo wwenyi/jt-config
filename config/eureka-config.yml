@@ -1,6 +1,6 @@
 spring:
   application:
-    name: jt-eureka  redis:    host: 192.168.40.152
+    name: jt-eureka  redis:    host: 192.168.42.132
     port: 6379
 server:  port: 8000  servlet:    context-path: /
 eureka:

@@ -7,7 +7,7 @@ spring:  application:    name: jt-user  datasource:
     username: root
     password: root  http:    encoding:      force-response: true
   redis:
-    host: 192.168.40.152
+    host: 192.168.42.132
     port: 6379 
 eureka:
   instance:

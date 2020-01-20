@@ -2,7 +2,7 @@ server:
   port: 8005
   servlet:    context-path: /web
 spring:  application:    name: jt-web
-  redis:    host: 192.168.40.152
+  redis:    host: 192.168.42.132
     port: 6379#  mvc:#    view:#      prefix: .html
 #      suffix: classpath:/view
 eureka:

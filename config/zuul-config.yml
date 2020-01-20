@@ -7,7 +7,7 @@ spring:  application:    name: jt-zuul  datasource:    driver-class-name: co
     username: root
     password: root
   redis:
-    host: 192.168.40.152
+    host: 192.168.42.132
     port: 6379
 #注册到eureka中
 eureka:  instance:
